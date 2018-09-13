@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  microdemo.api:
+    image: ${DOCKER_REGISTRY}microdemoapi
+    build:
+      context: .
+      dockerfile: src/ApiGateways/MicroDemo.Api/dockerfile
+
+  payment.api:
+    image: ${DOCKER_REGISTRY}paymentapi
+    build:
+      context: .
+      dockerfile: src/Services/Payment/Payment.Api/Dockerfile
+
+
+  policy.api:
+    image: ${DOCKER_REGISTRY}policyapi
+    build:
+      context: .
+      dockerfile: src/Services/Policy/Policy.Api/Dockerfile
+
+
+  pricing.api:
+    image: ${DOCKER_REGISTRY}pricingapi
+    build:
+      context: .
+      dockerfile: src/Services/Pricing/Pricing.Api/Dockerfile
+

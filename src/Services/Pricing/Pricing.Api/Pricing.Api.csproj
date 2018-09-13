@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <DockerComposeProjectPath>..\..\..\..\docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>f935dc88-0b1e-48df-85e8-171a1cf37cf0</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\Common\Common.csproj" />
+    <ProjectReference Include="..\..\..\Core\EventBus\EventBus.csproj" />
+    <ProjectReference Include="..\..\..\Core\Messages\Messages.csproj" />
+    <ProjectReference Include="..\Pricing.DataAccess.PostgreSql\Pricing.DataAccess.PostgreSql.csproj" />
+  </ItemGroup>
+
+</Project>

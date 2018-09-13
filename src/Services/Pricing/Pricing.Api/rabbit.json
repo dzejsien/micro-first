@@ -1,0 +1,8 @@
+﻿// docker run -d -p 5672:5672 -h rabbitmqHost --name RabbitMq rabbitmq
+{
+  "Username": "guest",
+  "Password": "guest",
+  "VirtualHost": "/",
+  "Port": 5672,
+  "Hostnames": [ "10.0.75.2" ]
+}

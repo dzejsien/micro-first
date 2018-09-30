@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Core.EventBus;
+using Core.Common.EventBus;
 using Core.Messages.Commands.Payments;
 using MicroDemo.Api.Api;
 using Microsoft.AspNetCore.Mvc;

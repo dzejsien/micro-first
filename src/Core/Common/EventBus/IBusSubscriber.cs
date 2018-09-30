@@ -1,6 +1,6 @@
 ﻿using Core.Common.EventBus;
 
-namespace Core.EventBus
+namespace Core.Common.EventBus
 {
     public interface IBusSubscriber
     {

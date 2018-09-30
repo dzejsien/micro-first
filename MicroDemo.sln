@@ -49,6 +49,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroDemo.Api", "src\ApiGat
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3F1A9E2C-1EE4-43EE-ADFA-A32C93C9A6BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MassTransitEventBus", "src\Core\MassTransitEventBus\MassTransitEventBus.csproj", "{69DB6AA9-A4B0-4F8C-922F-B7DB1BFD122D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{3F1A9E2C-1EE4-43EE-ADFA-A32C93C9A6BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F1A9E2C-1EE4-43EE-ADFA-A32C93C9A6BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F1A9E2C-1EE4-43EE-ADFA-A32C93C9A6BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69DB6AA9-A4B0-4F8C-922F-B7DB1BFD122D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69DB6AA9-A4B0-4F8C-922F-B7DB1BFD122D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69DB6AA9-A4B0-4F8C-922F-B7DB1BFD122D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69DB6AA9-A4B0-4F8C-922F-B7DB1BFD122D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -142,6 +148,7 @@ Global
 		{6754CDFD-052B-49E7-8EF6-AEAB50B09C12} = {26AC221A-861F-4236-9EB3-A61C030ED928}
 		{C03B5513-83F8-4D1A-B7D6-744FCBEDB2FB} = {D07849FD-F9D0-4E9C-9280-6D7716A55F5B}
 		{B2CF6B7E-6D7A-4661-89D5-32441DCD6AB7} = {C03B5513-83F8-4D1A-B7D6-744FCBEDB2FB}
+		{69DB6AA9-A4B0-4F8C-922F-B7DB1BFD122D} = {26AC221A-861F-4236-9EB3-A61C030ED928}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9FC04587-5552-4048-A0FF-2F049B3CD433}

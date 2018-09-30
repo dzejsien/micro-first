@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MassTransit" Version="5.1.5" />
+    <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="5.1.5" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="5.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="RawRabbit" Version="1.10.4" />
     <PackageReference Include="RawRabbit.vNext" Version="1.10.4" />
@@ -18,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Core\EventBus\EventBus.csproj" />
+    <ProjectReference Include="..\..\..\Core\MassTransitEventBus\MassTransitEventBus.csproj" />
     <ProjectReference Include="..\Policy.DataAccess.SqlServer\Policy.DataAccess.SqlServer.csproj" />
   </ItemGroup>
 

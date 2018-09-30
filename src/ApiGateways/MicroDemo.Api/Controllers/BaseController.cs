@@ -29,7 +29,7 @@ namespace MicroDemo.Api.Controllers
             }
         }
 
-        protected async Task<IActionResult> PublishAsync<T>(T command, Guid? resourceId = null, string resource = "") where T : ICommand
+        protected async Task<IActionResult> PublishAsync<T>(T command, Guid? resourceId = null, string resource = "") where T : class, ICommand
         {
             // todo: publish context also
             var context = GetContext<T>(resourceId, resource);

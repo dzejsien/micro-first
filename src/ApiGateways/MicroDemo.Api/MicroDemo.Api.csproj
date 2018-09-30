@@ -19,6 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MassTransit" Version="5.1.5" />
+    <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="5.1.5" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="5.1.5" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Refit" Version="4.6.16" />
     <PackageReference Include="Refit.HttpClientFactory" Version="4.6.16" />
@@ -27,6 +30,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Core\EventBus\EventBus.csproj" />
+    <ProjectReference Include="..\..\Core\MassTransitEventBus\MassTransitEventBus.csproj" />
     <ProjectReference Include="..\..\Core\Messages\Messages.csproj" />
   </ItemGroup>
 

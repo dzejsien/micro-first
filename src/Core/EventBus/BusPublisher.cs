@@ -13,12 +13,12 @@ namespace Core.EventBus
             _busClient = busClient;
         }
 
-        public async Task PublishCommandAsync<TCommand>(TCommand command) where TCommand : ICommand
+        public async Task PublishCommandAsync<TCommand>(TCommand command) where TCommand : class, ICommand
         {
             await _busClient.PublishAsync(command);
         }
 
-        public async Task PublishEventAsync<TEvent>(TEvent @event) where TEvent : IEvent
+        public async Task PublishEventAsync<TEvent>(TEvent @event) where TEvent : class, IEvent
         {
             await _busClient.PublishAsync(@event);
         }

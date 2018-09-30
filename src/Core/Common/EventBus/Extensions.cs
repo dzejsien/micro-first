@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Core.Common.EventBus;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Core.EventBus
+namespace Core.Common.EventBus
 {
     public static class Extensions
     {

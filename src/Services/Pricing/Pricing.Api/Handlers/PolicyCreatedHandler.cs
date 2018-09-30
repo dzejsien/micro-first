@@ -3,6 +3,7 @@ using Core.Common.EventBus;
 using Core.EventBus;
 using Core.Messages.Events.Policies;
 using Core.Messages.Events.Pricing;
+using MassTransit;
 
 namespace Pricing.Api.Handlers
 {
@@ -26,6 +27,21 @@ namespace Pricing.Api.Handlers
                 
                 await _busPublisher.PublishEventAsync(new ContributionCalculatedEvent(@event.PolicyId, value));
             }).ExecuteAsync();
+        }
+    }
+
+    public class PolicyCreatedEventConsumer : IConsumer<PolicyCreatedEvent>
+    {
+        private readonly IEventHandler<PolicyCreatedEvent> _handler;
+
+        public PolicyCreatedEventConsumer(IEventHandler<PolicyCreatedEvent> handler)
+        {
+            _handler = handler;
+        }
+
+        public async Task Consume(ConsumeContext<PolicyCreatedEvent> context)
+        {
+            await _handler.HandleAsync(context.Message);
         }
     }
 }

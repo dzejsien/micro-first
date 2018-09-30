@@ -3,6 +3,7 @@ using Core.Common.EventBus;
 using Core.EventBus;
 using Core.Messages.Commands.Policies;
 using Core.Messages.Events.Policies;
+using MassTransit;
 using Policy.DataAccess.SqlServer;
 using Policy.Domain;
 
@@ -33,6 +34,21 @@ namespace Policy.Api.Handlers
                 throw ex;
             })
             .ExecuteAsync();
+        }
+    }
+
+    public class CreatePolicyConsumer : IConsumer<CreatePolicyCommand>
+    {
+        private readonly ICommandHandler<CreatePolicyCommand> _handler;
+
+        public CreatePolicyConsumer(ICommandHandler<CreatePolicyCommand> handler)
+        {
+            _handler = handler;
+        }
+
+        public async Task Consume(ConsumeContext<CreatePolicyCommand> context)
+        {
+            await _handler.HandleAsync(context.Message);
         }
     }
 }

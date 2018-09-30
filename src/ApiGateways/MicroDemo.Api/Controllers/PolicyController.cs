@@ -1,4 +1,4 @@
-﻿using Core.EventBus;
+﻿using Core.Common.EventBus;
 using Core.Messages.Commands.Policies;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;

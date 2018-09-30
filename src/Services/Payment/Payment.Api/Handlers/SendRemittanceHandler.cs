@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Core.Common.EventBus;
 using Core.Messages.Commands.Payments;
+using MassTransit;
 using Payment.Domain;
 
 namespace Payment.Api.Handlers
@@ -24,6 +25,21 @@ namespace Payment.Api.Handlers
             })
             // todo: error handling
             .ExecuteAsync();
+        }
+    }
+
+    public class SendRemittanceCommandConsumer : IConsumer<SendRemittanceCommand>
+    {
+        private readonly ICommandHandler<SendRemittanceCommand> _handler;
+
+        public SendRemittanceCommandConsumer(ICommandHandler<SendRemittanceCommand> handler)
+        {
+            _handler = handler;
+        }
+
+        public async Task Consume(ConsumeContext<SendRemittanceCommand> context)
+        {
+            await _handler.HandleAsync(context.Message);
         }
     }
 }
